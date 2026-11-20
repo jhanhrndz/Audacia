@@ -296,14 +296,6 @@ python tests/test_esp32.py
 
 ---
 
-## 🔒 Higiene de Git y Seguridad
-
-Para garantizar un repositorio limpio y apto para producción:
-1. **Protección de Credenciales:** El archivo `.env` y las cabeceras `secrets.h` de Arduino están estrictamente ignorados por [`.gitignore`](.gitignore). Nunca registres contraseñas Wi-Fi ni tokens privados en Git.
-2. **Exclusión de Binarios Pesados:** Los modelos de redes neuronales (`*.tflite`, `*.onnx`, `*.pt` > 30 MB) no se suben al historial de Git. Se descargan automáticamente al primer inicio mediante PyTorch Hub o con `versions/v6_mobile_android/tools/fetch_model.py`.
-3. **Caché y Archivos Volátiles:** Los entornos virtuales (`.venv/`), compilados de Python (`__pycache__/`) y cachés de testing (`.pytest_cache/`) están permanentemente excluidos.
-
----
 
 ## 👥 Créditos, Mentoría y Licencia
 
